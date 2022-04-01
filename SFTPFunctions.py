@@ -1,4 +1,3 @@
-import pysftp
 import os
 
 
@@ -19,10 +18,9 @@ def handleCheck(connectioncondition, connection):
     else:
         print('Connection Failed, Try again? (Y/N)\n')
         checkagain = input()
-        print ('\n')
+        print('\n')
         if checkagain == 'y' or 'yes':
             handleCheck(checkConnection(connection))
         elif checkagain == 'n' or 'no':
             print('Exiting Program.\n')
             quit()
-
